@@ -1,0 +1,83 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
+    "version": "1.0.0",
+    "id": "c49063fb-9ffd-485f-8021-a99a7f2e9b94",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/termofuse",
+        "termsOfUseUrl": "https://www.example.com/privacy"
+    },
+    "icons": {
+        "color": "northwind-suppliers-192.png",
+        "outline": "northwind-suppliers-32.png"
+    },
+    "name": {
+        "short": "Build418PR-local",
+        "full": "full name for Build418PreRelease"
+    },
+    "description": {
+        "short": "Insert Northwind supplier information",
+        "full": "Insert Northwind supplier information into Teams and Outlook"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [
+        {
+            "botId": "eed51754-1d6a-4a85-91eb-e3e9f730985e",
+            "commands": [
+                {
+                    "id": "searchQuery",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Find a Northwind supplier",
+                    "title": "Supplier search",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "supplierME",
+                            "title": "Supplier search",
+                            "description": "Your search query",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "searchEmail",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Share a contact",
+                    "title": "Contact search",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "contactME",
+                            "title": "Contact search",
+                            "description": "Type name or company",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "afb0-20-163-72-118.ngrok.io"
+    ],
+    "webApplicationInfo": {
+        "id": "1d47b42f-a272-47f7-8c4f-7c69ad2a7056",
+        "resource": "api://botid-eed51754-1d6a-4a85-91eb-e3e9f730985e"
+    }
+}
